@@ -7,10 +7,8 @@ function ItemList() {
   const { tasks, getTasks } = useContext(TaskContext);
 
   useEffect(()=>{
-    if(tasks.length === 0){
-      getTasks();
-    }
-  }, [tasks, getTasks]);
+    getTasks();
+  }, [getTasks]);
 
   return (
     <div
