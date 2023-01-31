@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useCallback, useState } from "react";
 import taskApi from '../utils/fetch';
 
 const TaskContext = createContext();
@@ -6,8 +6,8 @@ const TaskContext = createContext();
 export function TaskProvider ({ children }) {
   const [tasks, setTasks] = useState([]);
 
-  const getTasks = async () => taskApi('GET', 'tasks')
-    .then(({ data: tasks }) => setTasks(tasks));
+  const getTasks = useCallback(async () => taskApi('GET', 'tasks')
+    .then(({ data: tasks }) => setTasks(tasks)), []);
 
   const getTask = async (id) => taskApi('GET', `task/${id}`)
     .then(({ data: task }) => task);
