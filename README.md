@@ -1,6 +1,6 @@
 # TodoList in Railway
 
-Aplicação full stack simples de lista de tarefas utilizada na Masterclass de Deploy com Railway do Curso de Desenvolvimento Web da Trybe.
+Aplicação full stack simples de lista de tarefas utilizada na Masterclass de Deploy com Railway do Curso de Desenvolvimento Full Stack da Trybe.
 
 As instruções para subir a aplicação no Railway estão nas lições da plataforma.
 
